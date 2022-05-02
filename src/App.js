@@ -40,10 +40,18 @@ function App() {
 // 1. Create other variables for assignments, exams, and engagement here
     let currentA00 = document.querySelector('#a00').value
     let currentA01 = document.querySelector('#a01').value
+    let currentA02 = document.querySelector('#a02').value
+    let currentA03 = document.querySelector('#a03').value
+    let currentA04 = document.querySelector('#a04').value
+    let currentA05 = document.querySelector('#a05').value
+    let currentE01 = document.querySelector('#a06').value
+    let currentE02 = document.querySelector('#a07').value
+    let currentA99 = document.querySelector('#a99').value
+
     if(currentSum==='')
     return;
 // 2. This line is where you add the points all together. Add your other variable references here. Make sure that they match what is above and what is below in the HTML form
-    let sum = parseInt(currentA00) + parseInt(currentA01);
+    let sum = parseInt(currentA00) + parseInt(currentA01) + parseInt(currentA02) + parseInt(currentA03) + parseInt(currentA04) + parseInt(currentA05) + parseInt(currentE01) + parseInt(currentE02) + parseInt(currentA99);
     setCurrentSum(sum);
   }
 
@@ -60,6 +68,13 @@ function App() {
       <form>
             <input type="text" id="a00" placeholder="a00" /><br/><br/>
             <input type="text" id="a01" placeholder="a01" /><br/><br/>
+            <input type="text" id="a02" placeholder="a02" /><br/><br/>
+            <input type="text" id="a03" placeholder="a03" /><br/><br/>
+            <input type="text" id="a04" placeholder="a04" /><br/><br/>
+            <input type="text" id="a05" placeholder="a05" /><br/><br/>
+            <input type="text" id="a06" placeholder="e01" /><br/><br/>
+            <input type="text" id="a07" placeholder="e02" /><br/><br/>
+            <input type="text" id="a99" placeholder="a99" /><br/><br/>
             <button onClick={Add}>Add</button>
             <button onClick={Clear}>Clear</button>
             <label for="result"><b>Result:</b></label>
